@@ -21,16 +21,16 @@ id_simple_format = '[%(levelname)s][%(asctime)s] %(message)s'
 
 # 定义日志输出格式 结束
 
-logfile_dir = os.path.dirname(os.path.abspath(__file__))  # log文件的目录
+logfile_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # log文件的目录
 
-logfile_name = 'log'  # log文件名
+logfile_name = 'actionLog.txt'  # log文件名
 
 # 如果不存在定义的日志目录就创建一个
 if not os.path.isdir(logfile_dir):
     os.mkdir(logfile_dir)
 
 # log文件的全路径
-logfile_path = os.path.join(logfile_dir, logfile_name)
+logfile_path = os.path.join(setting.BASE_LOGDIR, logfile_name)
 
 # log配置字典
 LOGGING_DIC = {
@@ -72,6 +72,8 @@ LOGGING_DIC = {
         },
     },
 }
+
+logging.config.dictConfig(LOGGING_DIC)  # 导入上面定义的logging配置
 
 
 def load_my_logging_cfg():

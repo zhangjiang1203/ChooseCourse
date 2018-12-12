@@ -1,0 +1,1 @@
+[2018-12-12 15:51:58,009][MainThread:4445865408][task_id:__main__][manager.py:16][DEBUG][start logging time 1544601118.009003]
