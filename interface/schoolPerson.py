@@ -27,6 +27,6 @@ class Teacher(SchoolPerson):
 
 
 class Student(SchoolPerson):
-    def __init__(self,name,age,sex,job_title):
+    def __init__(self,name,age,sex,course):
         SchoolPerson.__init__(name,age,sex)
-        self.course = []
+        self.course = course

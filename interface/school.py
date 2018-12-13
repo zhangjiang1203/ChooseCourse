@@ -8,9 +8,10 @@
 
 
 class School:
-    def __init__(self,name,province,city,course=[]):
+    def __init__(self,name,province,city,course=[],grade=[]):
         self.name = name
         self.province = province
         self.city = city
         self.course = course
+        self.grade = grade
 
